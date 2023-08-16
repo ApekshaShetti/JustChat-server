@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "account",
     # External
     "drf_spectacular",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
