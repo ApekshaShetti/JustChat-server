@@ -6,6 +6,7 @@ drf-spectacular==0.26.4
 inflection==0.5.1
 jsonschema==4.19.0
 jsonschema-specifications==2023.7.1
+Pillow==10.0.0
 psycopg2==2.9.7
 python-dotenv==1.0.0
 pytz==2023.3
