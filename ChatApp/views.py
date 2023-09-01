@@ -3,13 +3,15 @@ from rest_framework import viewsets
 from .models import Server
 from .serializer import ServerSerailizer
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import ValidationError,AuthenticationFailed
 from django.db.models import Count
 from .schema import server_list_docs
 
 class ServerListViewSet(viewsets.ViewSet):
     queryset = Server.objects.all()
-
+    permission_classes = [IsAuthenticated]
+    
     @server_list_docs
     def list(self,request):
         category = request.query_params.get("category") # category data
